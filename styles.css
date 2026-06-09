@@ -199,12 +199,15 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   box-shadow: var(--shadow);
 }
 .gallery-card {
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
 }
-.gallery-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
-  z-index: 2;
+.gallery-card:hover,
+.gallery-card:focus-visible {
+  transform: translateY(-10px) scale(1.08);
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.22);
+  z-index: 3;
 }
 .service-card {
   min-height: 200px;
@@ -270,10 +273,11 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   object-position: center;
   border-radius: 18px;
   margin-bottom: 1rem;
-  transition: transform 0.28s ease;
+  transition: transform 0.32s ease;
 }
-.gallery-card:hover .gallery-photo {
-  transform: scale(1.03);
+.gallery-card:hover .gallery-photo,
+.gallery-card:focus-visible .gallery-photo {
+  transform: scale(1.08);
 }
 .project-tag {
   display: inline-block;
@@ -362,6 +366,43 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   margin: 0.75rem 0 0;
   color: var(--muted);
 }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(10, 10, 14, 0.86);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 1000;
+}
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox img {
+  max-width: min(92vw, 1100px);
+  max-height: 86vh;
+  border-radius: 22px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
 .site-footer {
   padding: 1.4rem 0 2.6rem;
   color: #676b74;
@@ -399,4 +440,12 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   .gallery-grid { grid-template-columns: 1fr; }
   .service-card, .gallery-card, .hero-card-inner, .quote-form, .cta-box { border-radius: 20px; }
   .feature-project { grid-column: span 1; }
+  .gallery-card:hover,
+  .gallery-card:focus-visible {
+    transform: translateY(-6px) scale(1.04);
+  }
+  .gallery-card:hover .gallery-photo,
+  .gallery-card:focus-visible .gallery-photo {
+    transform: scale(1.05);
+  }
 }

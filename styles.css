@@ -198,6 +198,14 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   padding: 1.4rem;
   box-shadow: var(--shadow);
 }
+.gallery-card {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.gallery-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
 .service-card {
   min-height: 200px;
   background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
@@ -262,6 +270,10 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   object-position: center;
   border-radius: 18px;
   margin-bottom: 1rem;
+  transition: transform 0.28s ease;
+}
+.gallery-card:hover .gallery-photo {
+  transform: scale(1.03);
 }
 .project-tag {
   display: inline-block;

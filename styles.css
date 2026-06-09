@@ -346,6 +346,10 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
 }
 .quote-form textarea { resize: vertical; }
 .full-span { grid-column: 1 / -1; }
+.form-note {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
 .site-footer {
   padding: 1.4rem 0 2.6rem;
   color: #676b74;

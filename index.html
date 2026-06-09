@@ -200,7 +200,11 @@
           <h2>Tell us about your project.</h2>
           <p>Use this form to prepare your message. When you submit, it opens your email app with the project details ready to send.</p>
         </div>
-        <form class="quote-form" action="mailto:alonzokitchenbathinc@gmail.com" method="post" enctype="text/plain">
+        <form class="quote-form" action="https://formsubmit.co/alonzokitchenbathinc@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New quote request - Alonzo Kitchen & Bath Inc">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://lexolab.github.io/alonzo-kitchen-bath/">
           <div class="form-grid">
             <label>
               Full Name
@@ -236,6 +240,7 @@
             </label>
           </div>
           <button type="submit" class="btn btn-primary">Send Quote Request</button>
+          <p class="form-note">Quote requests are sent directly to <strong>alonzokitchenbathinc@gmail.com</strong>.</p>
         </form>
       </div>
     </section>

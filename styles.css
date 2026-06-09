@@ -39,7 +39,7 @@ a { text-decoration: none; color: inherit; }
   gap: 1.2rem;
   padding: 1rem 0;
 }
-.brand img { height: 92px; width: auto; }
+.brand img { height: 118px; width: auto; }
 nav { display: flex; align-items: center; gap: 1.2rem; font-weight: 600; }
 nav a { color: #2e3138; }
 .nav-link-strong { color: var(--primary); }
@@ -382,7 +382,7 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
 @media (max-width: 720px) {
   .hero { padding-top: 2rem; }
   nav { gap: 0.8rem; font-size: 0.95rem; }
-  .brand img { height: 68px; }
+  .brand img { height: 84px; }
   .section { padding: 4rem 0; }
   .gallery-grid { grid-template-columns: 1fr; }
   .service-card, .gallery-card, .hero-card-inner, .quote-form, .cta-box { border-radius: 20px; }

@@ -39,9 +39,10 @@ a { text-decoration: none; color: inherit; }
   gap: 1.2rem;
   padding: 1rem 0;
 }
-.brand img { height: 64px; width: auto; }
+.brand img { height: 92px; width: auto; }
 nav { display: flex; align-items: center; gap: 1.2rem; font-weight: 600; }
 nav a { color: #2e3138; }
+.nav-link-strong { color: var(--primary); }
 .nav-cta {
   padding: 0.8rem 1rem;
   background: var(--text);
@@ -144,6 +145,16 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   border: 1px solid rgba(255,255,255,0.12);
   font-size: 0.8rem;
   font-weight: 700;
+}
+.contact-mini {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.contact-mini a {
+  color: #fff;
+  font-weight: 600;
+  word-break: break-word;
 }
 .stats {
   display: grid;
@@ -252,6 +263,22 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
+.contact-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+.contact-card {
+  min-width: min(100%, 360px);
+  padding: 1.4rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #111214 0%, #1d2026 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.contact-card p:last-child { margin-bottom: 0; }
+.contact-card a { color: #fff; }
 .site-footer {
   padding: 1.4rem 0 2.6rem;
   color: #676b74;
@@ -281,7 +308,7 @@ h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
 @media (max-width: 720px) {
   .hero { padding-top: 2rem; }
   nav { gap: 0.8rem; font-size: 0.95rem; }
-  .brand img { height: 52px; }
+  .brand img { height: 68px; }
   .section { padding: 4rem 0; }
   .service-card, .gallery-card, .hero-card-inner, .cta-box { border-radius: 20px; }
 }

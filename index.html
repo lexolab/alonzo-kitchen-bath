@@ -29,6 +29,18 @@
 
   <main id="top">
     <section class="hero">
+      <div class="container">
+        <div class="top-social-bar" aria-label="Social media links">
+          <a href="#" class="social-link social-link-top" aria-label="Facebook profile link placeholder" title="Replace with Facebook profile URL">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.7-1.6H17V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V11H8v3h2.5v8h3Z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="social-link social-link-top" aria-label="TikTok profile link placeholder" title="Replace with TikTok profile URL">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.8 3c.3 2.1 1.5 3.7 3.8 4V10c-1.4 0-2.6-.4-3.7-1.1v6c0 3-2.4 5.4-5.4 5.4S4 17.9 4 14.9s2.4-5.4 5.4-5.4c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1 2.4-2.4V3h3Z"/></svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Professional remodeling & construction</p>
@@ -180,32 +192,49 @@
     </div>
 
     <section class="section" id="reviews">
-      <div class="container">
+      <div class="container review-box-wrap">
         <div class="section-head">
           <p class="eyebrow">Client reviews</p>
-          <h2>A section ready for customer feedback</h2>
-          <p>You can replace these cards with real testimonials anytime, or duplicate them as new reviews come in.</p>
+          <h2>Leave your own review</h2>
+          <p>A simple box where customers can submit their own review directly.</p>
         </div>
-        <div class="reviews-grid">
-          <article class="review-card">
-            <div class="review-stars" aria-label="5 star review">★★★★★</div>
-            <p>“Add your first customer review here. Highlight the quality of the work, communication, and final result.”</p>
-            <strong>Customer Name</strong>
-            <span>Kitchen Remodeling</span>
-          </article>
-          <article class="review-card">
-            <div class="review-stars" aria-label="5 star review">★★★★★</div>
-            <p>“Use this space for a bathroom, deck, basement, or handyman review to build trust quickly.”</p>
-            <strong>Customer Name</strong>
-            <span>Bathroom Remodeling</span>
-          </article>
-          <article class="review-card">
-            <div class="review-stars" aria-label="5 star review">★★★★★</div>
-            <p>“Short, specific testimonials usually work best: clean finish, on-time work, respectful crew, great results.”</p>
-            <strong>Customer Name</strong>
-            <span>Home Improvement Project</span>
-          </article>
-        </div>
+        <form class="review-form" action="https://formsubmit.co/alonzokitchenbathinc@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New customer review - Alonzo Kitchen & Bath Inc">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://lexolab.github.io/alonzo-kitchen-bath/#reviews">
+          <div class="review-form-grid">
+            <label>
+              Your Name
+              <input type="text" name="Reviewer Name" placeholder="Your name" required>
+            </label>
+            <label>
+              Service Received
+              <input type="text" name="Service" placeholder="Kitchen remodel, bathroom, deck..." required>
+            </label>
+            <label>
+              Rating
+              <select name="Rating" required>
+                <option value="">Select rating</option>
+                <option>★★★★★ - 5 Stars</option>
+                <option>★★★★☆ - 4 Stars</option>
+                <option>★★★☆☆ - 3 Stars</option>
+                <option>★★☆☆☆ - 2 Stars</option>
+                <option>★☆☆☆☆ - 1 Star</option>
+              </select>
+            </label>
+            <label>
+              City or Area
+              <input type="text" name="Location" placeholder="City or neighborhood">
+            </label>
+            <label class="full-span">
+              Your Review
+              <textarea name="Review" rows="6" placeholder="Tell people about your experience with Alonzo Kitchen & Bath Inc." required></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Review</button>
+          <p class="form-note">Reviews are sent directly to <strong>alonzokitchenbathinc@gmail.com</strong>.</p>
+        </form>
       </div>
     </section>
 
@@ -225,16 +254,6 @@
           <p><strong>Phone</strong><br><a href="tel:+18137248926">(813) 724-8926</a></p>
           <p><strong>Email</strong><br><a href="mailto:alonzokitchenbathinc@gmail.com">alonzokitchenbathinc@gmail.com</a></p>
           <p><strong>Quotes</strong><br>Available for kitchens, baths, additions, decks, basements, custom media walls, and more.</p>
-          <div class="social-links" aria-label="Social media links">
-            <a href="#" class="social-link" aria-label="Facebook profile link placeholder" title="Replace with Facebook profile URL">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.7-1.6H17V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V11H8v3h2.5v8h3Z"/></svg>
-              <span>Facebook</span>
-            </a>
-            <a href="#" class="social-link" aria-label="TikTok profile link placeholder" title="Replace with TikTok profile URL">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.8 3c.3 2.1 1.5 3.7 3.8 4V10c-1.4 0-2.6-.4-3.7-1.1v6c0 3-2.4 5.4-5.4 5.4S4 17.9 4 14.9s2.4-5.4 5.4-5.4c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1 2.4-2.4V3h3Z"/></svg>
-              <span>TikTok</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>
